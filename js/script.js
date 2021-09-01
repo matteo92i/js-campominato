@@ -1,15 +1,21 @@
-function randomNumber(uno, sedici) {
-    var result = Math.floor(Math.random() * 100)
+function generaNumRandom (min, max){
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * ( max - min + 1)) + min;
 }
-    
-    
 
-let listaNumeriPC = [];
+let listaFiorito = [];
 
-var random = randomNumber(1, 100)
-for (var i = 0; i < 16; i++) {
-    var resultRandom16 = randomNumber(1, 100);
-    listaNumeriPC.push(resultRandom16)
-  
+let x = 0
+
+while(listaFiorito.length < 16){
+
+    x++
+
+    let num = generaNumRandom(1,100);
+    if( !listaFiorito.includes(num)){
+        listaFiorito.push(num);
+    }
 }
-console.log(listaNumeriPC)
+
+console.log(listaFiorito)
