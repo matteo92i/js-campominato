@@ -19,3 +19,26 @@ while(listaFiorito.length < 16){
 }
 
 console.log(listaFiorito)
+
+let numUtente = [];
+
+let y = 0
+
+while(numUtente.length < 5){
+
+    y++
+
+    let inserisciNum = parseInt(prompt('inserisci il numero da 1 a 100'));
+
+    if( !numUtente.includes(inserisciNum)){
+        numUtente.push(inserisciNum);
+    } 
+
+};
+
+
+
+
+
+console.log(numUtente);
+
